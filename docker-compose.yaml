@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  otus-professional-python-homework-02:
+    build:
+      context: . #./../Downloads/03_type_annotations
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'
+    volumes:
+      - ./lecture.ipynb:/src/lecture.ipynb
