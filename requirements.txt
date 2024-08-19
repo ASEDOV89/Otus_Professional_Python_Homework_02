@@ -1,2 +1,2 @@
-mypy
+mypy>=0.570
 typing
