@@ -8,5 +8,5 @@ from typing import TypeVar
 
 T = TypeVar('T', bound=int)
 
-def add[T](a:T, b:T) -> T:
-    return a
+def add(a: T, b: T) -> T:
+    return a + b
