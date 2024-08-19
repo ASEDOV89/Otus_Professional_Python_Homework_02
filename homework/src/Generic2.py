@@ -7,7 +7,7 @@ The type can only be str or int (or their subclasses).
 
 from typing import TypeVar
 
-T = TypeVar('T')
+T = TypeVar('T', str, int)
 
-def add[T: (str,int)](a:T, b:T) -> T:
+def add(a: T, b: T) -> T:
     return a
