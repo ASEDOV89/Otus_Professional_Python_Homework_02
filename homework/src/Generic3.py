@@ -5,6 +5,9 @@ The function `add` accepts one argument and returns a value, they all have the s
 The type can only be int or subclasses of int.
 """
 
+from typing import TypeVar
+
+T = TypeVar('T', int, str)
 
 def add[T: int](a: T) -> T:
     return a
