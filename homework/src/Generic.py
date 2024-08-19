@@ -4,9 +4,13 @@ TODO:
 The function `add` accepts two arguments and returns a value, they all have the same type.
 """
 
-from typing import TypeVar
+from typing import TypeVar, Protocol
 
-T = TypeVar('T')
+class SupportsAdd(Protocol):
+    def __add__(self, other: "SupportsAdd") -> "SupportsAdd":
+        ...
+
+T = TypeVar('T', bound=SupportsAdd)
 
 def add(a: T, b: T) -> T:
     return a + b
